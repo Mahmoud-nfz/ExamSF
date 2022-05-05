@@ -7,8 +7,16 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Controller\\FirstController' => $baseDir . '/src/Controller/FirstController.php',
+    'App\\Controller\\PFEController' => $baseDir . '/src/Controller/PFEController.php',
     'App\\DataFixtures\\AppFixtures' => $baseDir . '/src/DataFixtures/AppFixtures.php',
+    'App\\DataFixtures\\EntrepriseFixtures' => $baseDir . '/src/DataFixtures/EntrepriseFixtures.php',
+    'App\\DataFixtures\\PFEFixtures' => $baseDir . '/src/DataFixtures/PFEFixtures.php',
+    'App\\Entity\\Entreprise' => $baseDir . '/src/Entity/Entreprise.php',
+    'App\\Entity\\PFE' => $baseDir . '/src/Entity/PFE.php',
+    'App\\Form\\PFEType' => $baseDir . '/src/Form/PFEType.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
+    'App\\Repository\\EntrepriseRepository' => $baseDir . '/src/Repository/EntrepriseRepository.php',
+    'App\\Repository\\PFERepository' => $baseDir . '/src/Repository/PFERepository.php',
     'Collator' => $vendorDir . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Doctrine\\Bundle\\DoctrineBundle\\Attribute\\AsEntityListener' => $vendorDir . '/doctrine/doctrine-bundle/Attribute/AsEntityListener.php',

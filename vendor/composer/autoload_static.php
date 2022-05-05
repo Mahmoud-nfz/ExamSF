@@ -569,8 +569,16 @@ class ComposerStaticInitdf01892ef4ce4c2da72d6655f49abfae
 
     public static $classMap = array (
         'App\\Controller\\FirstController' => __DIR__ . '/../..' . '/src/Controller/FirstController.php',
+        'App\\Controller\\PFEController' => __DIR__ . '/../..' . '/src/Controller/PFEController.php',
         'App\\DataFixtures\\AppFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/AppFixtures.php',
+        'App\\DataFixtures\\EntrepriseFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/EntrepriseFixtures.php',
+        'App\\DataFixtures\\PFEFixtures' => __DIR__ . '/../..' . '/src/DataFixtures/PFEFixtures.php',
+        'App\\Entity\\Entreprise' => __DIR__ . '/../..' . '/src/Entity/Entreprise.php',
+        'App\\Entity\\PFE' => __DIR__ . '/../..' . '/src/Entity/PFE.php',
+        'App\\Form\\PFEType' => __DIR__ . '/../..' . '/src/Form/PFEType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
+        'App\\Repository\\EntrepriseRepository' => __DIR__ . '/../..' . '/src/Repository/EntrepriseRepository.php',
+        'App\\Repository\\PFERepository' => __DIR__ . '/../..' . '/src/Repository/PFERepository.php',
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Doctrine\\Bundle\\DoctrineBundle\\Attribute\\AsEntityListener' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Attribute/AsEntityListener.php',
