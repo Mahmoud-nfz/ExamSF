@@ -16,13 +16,13 @@ use App\Entity\Entreprise ;
 #[Route('/PFE')]
 class PFEController extends AbstractController
 {
-    #[Route('/', name: 'app_p_f_e')]
-    public function index(): Response
-    {
-        return $this->render('pfe/index.html.twig', [
-            'controller_name' => 'PFEController',
-        ]);
-    }
+    // #[Route('/', name: 'app_p_f_e')]
+    // public function index(): Response
+    // {
+    //     return $this->render('pfe/index.html.twig', [
+    //         'controller_name' => 'PFEController',
+    //     ]);
+    // }
     
     #[Route('/add', name: 'pfe.add.form')]
     public function addPersonneForm(ManagerRegistry $doctrine,Request $request): Response
@@ -51,7 +51,7 @@ class PFEController extends AbstractController
         }
         
     }
-    #[Route('/PFE',name:"pfe.list")]
+    #[Route('/',name:"pfe.list")]
     public function indexAlls(ManagerRegistry $doctrine):Response
     {
 
@@ -59,7 +59,7 @@ class PFEController extends AbstractController
         $repositorypfe = $doctrine->getRepository(PFE::class) ;
         $ents = $repository->findAll() ;
 
-        $pfes = [] ;;
+        $pfes = [] ;
         foreach ($ents as $ent){
             $pfes[$ent] = count($ent->getPFEs()) ;
         }
