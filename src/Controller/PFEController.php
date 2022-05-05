@@ -55,12 +55,13 @@ class PFEController extends AbstractController
     public function indexAlls(ManagerRegistry $doctrine):Response
     {
 
-        $repository = $doctrine->getRepository(Entreprises::class) ;
+        $repository = $doctrine->getRepository(Entreprise::class) ;
+        $repositorypfe = $doctrine->getRepository(PFE::class) ;
         $ents = $repository->findAll() ;
 
-        for(ent in ents){
-            $repository = $doctrine->getRepository(Entreprise::class) ;
-            $entreprise = $repository->findBy(['nom' => 'Victoire']) ;
+        $pfes = [] ;;
+        foreach ($ents as $ent){
+            $pfes[$ent] = count($ent->getPFEs()) ;
         }
 
         
