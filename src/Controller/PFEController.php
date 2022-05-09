@@ -61,8 +61,11 @@ class PFEController extends AbstractController
 
         $pfes = [] ;
         foreach ($ents as $ent){
-            $pfes[$ent] = count($ent->getPFEs()) ;
+            $temp = $ent->getPFEs()->count() ;
+            // dd($ent) ;
+            $pfes[$ent->getDesignation()] = $temp ;
         }
+        // dd($pfes) ;
 
         
         return $this->render('pfe/index.html.twig',['pfes' => $pfes]);
